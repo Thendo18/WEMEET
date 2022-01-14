@@ -1,5 +1,5 @@
-import react from "react";
 import { GoogleOutlined, FacebookOutlined } from '@ant-design/icons';
+import React from 'react';
 
 const Login = () => {
     return(
@@ -12,7 +12,7 @@ const Login = () => {
 
 
                     <div className="login-button facebook">
-                    <GoogleOutlined /> Sign in with facebook
+                    <FacebookOutlined /> Sign in with facebook
             
                     </div>
                     </div>
