@@ -12,12 +12,23 @@ const Login = () => {
       <div id="login-card">
         <div id="login-container">
           <h2>Welcome to WeMeet!</h2>
-          <div className="login-button google">
+          <div
+            className="login-button google"
+            onClick={async () =>
+              await auth.signInWithRedirect(
+                new firebase.auth.GoogleAuthProvider()
+              )
+            }
+          >
             <GoogleOutlined /> Sign in with google
           </div>
           <br></br>
           <br></br>
-          <div className="login-button facebook">
+          <div className="login-button facebook"  onClick={async () =>
+            await auth.signInWithRedirect(
+              new firebase.auth.FacebookAuthProvider()
+            )
+          }>
             <FacebookOutlined /> Sign in with facebook
           </div>
         </div>
