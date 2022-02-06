@@ -47,7 +47,7 @@
 /* Login Page */
 
 #login-page {
-  background-image: linear-gradient(#40a9ff, #096dd9);
+  background-image: linear-gradient(#1c66a3, #04213f);
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -61,7 +61,7 @@
   left: calc(50vw - 210px);
   padding-top: 36px;
   padding-bottom: 66px;
-  width: 40%;
+  width: 35%;
   text-align: center;
   background-color: white;
   border-radius: 22px;
@@ -69,7 +69,7 @@
 
 .login-button {
   cursor: pointer;
-  color: white;
+  color: rgb(69, 48, 163);
   padding: 12px;
   border-radius: 8px;
   display: inline-block;
@@ -80,8 +80,7 @@
 }
 
 .google {
-  background-color: #4285f4;
-  color: white;
+  background-color: rgb(23, 152, 161);
 }
 
 #loading-container {
