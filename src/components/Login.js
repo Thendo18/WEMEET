@@ -2,11 +2,11 @@ import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
 
 import React from "react";
 
-import firebase from "firebase";
-
+import firebase from "firebase/app";
 import { auth } from "firebase/app";
 
-const Login = () => {
+
+function Login() {
   return (
     <div id="login-page">
       <div id="login-card">
@@ -14,27 +14,23 @@ const Login = () => {
           <h2>Welcome to WeMeet!</h2>
           <div
             className="login-button google"
-            onClick={async () =>
-              await auth.signInWithRedirect(
-                new firebase.auth.GoogleAuthProvider()
-              )
-            }
+            onClick={async () => await auth.signInWithRedirect(
+              new firebase.auth.GoogleAuthProvider()
+            )}
           >
             <GoogleOutlined /> Sign in with google
           </div>
           <br></br>
           <br></br>
-          <div className="login-button facebook"  onClick={async () =>
-            await auth.signInWithRedirect(
-              new firebase.auth.FacebookAuthProvider()
-            )
-          }>
+          <div className="login-button facebook" onClick={async () => await auth.signInWithRedirect(
+            new firebase.auth.FacebookAuthProvider()
+          )}>
             <FacebookOutlined /> Sign in with facebook
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Login;
