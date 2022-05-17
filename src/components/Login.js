@@ -1,7 +1,7 @@
 import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
 
 import React from "react";
-
+import "firebase/app";
 import firebase from "firebase/app";
 import { auth } from "firebase/app";
 
