@@ -1,25 +1,35 @@
 import React from 'react';
-// import { useHistory } from 'react-router';
-// import {ChatEngine} from  'react-chat-engine';
-// import { auth } from 'firebase';
+import { useHistory } from 'react-router-dom';
+import {ChatEngine} from  'react-chat-engine';
+import  {auth} from '../firebase';
 
-const chats = () => {
+const Chats = () => {
+    const history = useHistory();
+
+    const handleLogout = async () => { 
+        await auth.signOut();
+        history.push('/');
+    }
+
+
     return (
         <div className="chats-page">
             <div className="nav-bar">
                  <div className="logo-tab">
                      WEMEET
                 </div>
-                 <div className="logout-tab">
+                 <div onClick= {handleLogout} className="logout-tab">
                      Logout
                 </div>
                 </div>   
-        </div>
+        
 
-        // <ChatEnginene 
-        // height="calc(100vh - 66px)"
-        // ProjectId = "wemeet-chat"
-    )
+        <ChatEngine 
+        height="calc(100vh - 66px)"
+        ProjectId = "6569d195-2778-4945-9992-b96447b15b42"
+        />
+        </div>
+    );
 }
 
-export default chats;
+export default Chats;
